@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h3>Team Directory</h3>
+<table class="table table-striped">
+    <thead>
+        <tr><th>Email</th><th>Name</th><th>Role</th></tr>
+    </thead>
+    <tbody>
+        {% for email, data in employees.items() %}
+        <tr>
+            <td>{{ email }}</td>
+            <td>{{ data.name }}</td>
+            <td>{{ data.role }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

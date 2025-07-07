@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block content %}
+<h3 class="mb-4">👋 Welcome, {{ user.name }}</h3>
+
+<div class="row">
+  <!-- Profile Card -->
+  <div class="col-md-6 mb-4">
+    <div class="card shadow-sm">
+      <div class="card-header bg-primary text-white">Your Profile</div>
+      <div class="card-body">
+        <p><strong>Email:</strong> {{ user.id }}</p>
+        <p><strong>Role:</strong> {{ user.role }}</p>
+        <p><strong>Department:</strong> IT & Security</p>
+        <p><strong>Last Login:</strong> {{ "Just now" }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Announcements -->
+  <div class="col-md-6 mb-4">
+    <div class="card shadow-sm">
+      <div class="card-header bg-warning">📣 Announcements</div>
+      <div class="card-body">
+        <ul class="list-unstyled mb-0">
+          <li>🗓️ <strong>All-hands Meeting:</strong> Friday, 4 PM (Board Room A)</li>
+          <li>💻 <strong>Device Upgrade:</strong> Fill the hardware request form by Thursday</li>
+          <li>🎉 <strong>Annual Day:</strong> Confirm attendance by July 15</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Quick Links -->
+<div class="card shadow-sm">
+  <div class="card-header bg-light">Quick Actions</div>
+  <div class="card-body">
+    <a class="btn btn-outline-primary me-2 mb-2" href="/team">👥 Team Directory</a>
+    <a class="btn btn-outline-secondary me-2 mb-2 disabled" href="#">📝 Submit Leave Request (Coming Soon)</a>
+    <a class="btn btn-outline-success me-2 mb-2 disabled" href="#">🎫 IT Support Ticket (Coming Soon)</a>
+  </div>
+</div>
+{% endblock %}
